@@ -37,8 +37,8 @@ services:
         image: mongo # 引用官网 mongo 镜像
         container_name: editor-mongo
         restart: always
-        volumes:
-            - '.docker-volumes/mongo/data:/data/db' # 数据持久化
+        volumes: # 相当于docker run -p 82:80 -d -v xxxx:xxxx
+            - '.docker-volumes/mongo/data:/data/db' # 数据持久化，就是永远把数据放在一个位置
         environment:
             - MONGO_INITDB_DATABASE=lego_course
             - TZ=Asia/Shanghai # 设置时区
