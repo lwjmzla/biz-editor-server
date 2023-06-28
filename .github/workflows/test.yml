@@ -33,8 +33,8 @@ jobs:
 
                     cd /home/work/biz-editor-server;
                     git remote add origin https://lwjmzla:${{secrets.LWJ_PASSWORD}}@github.com/lwjmzla/biz-editor-server.git;
-                    git checkout dev;
-                    git pull origin dev; # 重新下载最新代码
+                    # git checkout dev;
+                    git pull; # 重新下载最新代码
                     git remote remove origin; # 删除 origin ，否则会暴露 github 密码
                     # 启动 docker
                     docker-compose build editor-server; # 和 docker-compose.yml service 名字一致
