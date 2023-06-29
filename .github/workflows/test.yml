@@ -18,10 +18,10 @@ jobs:
 
         steps:
             - uses: actions/checkout@v2
-            - name: Sync to Gitee
+            - name: Sync to Gitee # centos7获取github代码老是挂，要通过获取gitee代码来部署，所以要同步Gitee项目的代码
               uses: wearerequired/git-mirror-action@master
               env:
-                  SSH_PRIVATE_KEY: ${{ secrets.LWJ_ID_RSA }}
+                  SSH_PRIVATE_KEY: ${{ secrets.LWJ_ID_RSA }} # 传私钥
               with:
                   source-repo: git@github.com:lwjmzla/biz-editor-server.git
                   destination-repo: git@gitee.com:jking123/biz-editor-server.git
