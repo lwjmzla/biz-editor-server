@@ -46,3 +46,6 @@ services:
             - TZ=Asia/Shanghai # 设置时区
         ports:
             - '27016:27017' # 宿主机可以用 127.0.0.1:27016 即可连接容器中的数据库
+volumes:   # use volume by local driver, so you can use the volume directly
+  logs:
+    driver: local
