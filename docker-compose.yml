@@ -9,7 +9,7 @@ services:
         ports:
             - 81:3000 # 宿主机通过 81 访问
         volumes:
-            - logs:/app/logs # 同步pm2日志
+            - .docker-volumes/pm2/logs:/logs # 同步pm2日志
     editor-redis: # service name，重要！
         image: redis # 引用官网 redis 镜像
         container_name: editor-redis
@@ -46,9 +46,3 @@ services:
             - TZ=Asia/Shanghai # 设置时区
         ports:
             - '27016:27017' # 宿主机可以用 127.0.0.1:27016 即可连接容器中的数据库
-volumes:
-  logs:    # 设置volume cvat_data 绑定至本机 /data/cvat/data
-    driver_opts:
-      type: none
-      o: bind
-      device: /logs
