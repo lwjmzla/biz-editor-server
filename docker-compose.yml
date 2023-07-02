@@ -9,7 +9,7 @@ services:
         ports:
             - 81:3000 # 宿主机通过 81 访问
         volumes:
-            - .docker-volumes/pm2/logs:/logs # 同步pm2日志
+            - .docker-volumes/pm2/logs:/app/logs # 同步pm2日志
     editor-redis: # service name，重要！
         image: redis # 引用官网 redis 镜像
         container_name: editor-redis
