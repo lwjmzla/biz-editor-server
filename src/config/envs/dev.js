@@ -13,6 +13,8 @@ module.exports = {
     host: '127.0.0.1',
     port: '27017',
     dbName: 'lego_course',
+    // user: 'root',
+    // password: '123',
   },
 
   // redis 连接配置
