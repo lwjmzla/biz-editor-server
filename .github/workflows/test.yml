@@ -35,7 +35,8 @@ jobs:
                     git remote add origin https://13535123588:${{secrets.GITEE_LWJ_PASSWORD}}@gitee.com/jking123/biz-editor-server.git;
                     # git checkout dev;
                     git pull; # 重新下载最新代码
-                    git checkout remotes/origin/master;
+                    git fetch --tags; # 获取所有 tags 。否则，光执行 git pull origin master 获取不到新提交的 tag
+                    git checkout ${{ github.ref }};
                     # 启动 docker
                     docker-compose build editor-server; # 和 docker-compose.yml service 名字一致
                     git checkout master;
