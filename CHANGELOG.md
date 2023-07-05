@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/lwjmzla/biz-editor-server/compare/v1.1.1...v1.2.0) (2023-07-05)
+
+
+### Features
+
+* 添加nodejs发布方式 ([0f8868e](https://github.com/lwjmzla/biz-editor-server/commit/0f8868ea95e50b5cce53a99fed17a24c66c2bbd5))
+
 ## [1.1.1](https://github.com/lwjmzla/biz-editor-server/compare/v1.1.0...v1.1.1) (2023-07-04)
 
 # [1.1.0](https://github.com/lwjmzla/biz-editor-server/compare/v1.0.3...v1.1.0) (2023-07-04)
