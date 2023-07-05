@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/lwjmzla/biz-editor-server/compare/v1.2.0...v1.2.1) (2023-07-05)
+
+
+### Bug Fixes
+
+* 优化配置 ([790e647](https://github.com/lwjmzla/biz-editor-server/commit/790e647a3009f606cdd5228f974778f3b7212961))
+
 # [1.2.0](https://github.com/lwjmzla/biz-editor-server/compare/v1.1.1...v1.2.0) (2023-07-05)
 
 
