@@ -4,8 +4,9 @@
 const fs = require('fs');
 const path = require('path');
 const { NodeSSH } = require('node-ssh');
-// const chalk = require('chalk');
-// const ora = require('ora');
+const chalk = require('chalk');
+const ora = require('ora');
+const { execSync } = require('child_process');
 const pkg = require('../package.json');
 
 const ssh = new NodeSSH();
@@ -16,7 +17,6 @@ require('dotenv').config({ path: envFilePath });
 console.log(process.env.DB);
 
 // 项目构建
-const { execSync } = require('child_process');
 
 // execSync('npm run build', { stdio: 'inherit' })
 
@@ -46,8 +46,8 @@ function execAsync(sshIns, cmdStr, opts = {}) {
   });
 }
 
-// const spinner = ora();
-// spinner.start(chalk.blue('正在连接服务器'));
+const spinner = ora();
+spinner.start(chalk.yellow('正在连接服务器'));
 const exec = (cmdStr, opts) => execAsync(ssh, cmdStr, opts);
 ssh
   .connect({
@@ -56,7 +56,7 @@ ssh
     privateKey: sshConfig.privateKey,
   })
   .then(async (nodeSSH) => {
-    // spinner.succeed(chalk.green('服务器连接成功'));
+    spinner.succeed(chalk.green('服务器连接成功'));
     // spinner.start(chalk.blue("开始上传文件"));
     //   const putres = await nodeSSH.putDirectory(
     //     config.localFile,
@@ -67,7 +67,11 @@ ssh
     await exec('git pull', { cwd: remoteDir });
     await exec('git fetch --tags', { cwd: remoteDir });
     await exec(`git checkout v${pkg.version}`, { cwd: remoteDir });
+
+    spinner.start(chalk.yellow('正在构建docker镜像...'));
     await exec('docker-compose build editor-server', { cwd: remoteDir });
+    spinner.succeed(chalk.green('docker镜像构建成功'));
+
     await exec('git checkout master', { cwd: remoteDir });
     await exec('git remote remove origin', { cwd: remoteDir });
     await exec('docker-compose up -d', { cwd: remoteDir });
@@ -75,5 +79,5 @@ ssh
   })
   .catch((err) => {
     console.log(err);
-    // console.log(chalk.bgRed(err));
+    console.log(chalk.bgRed(err));
   });
