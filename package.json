@@ -13,7 +13,8 @@
     "lint-fix": "eslint --fix \"src/**/*.{js,ts}\"",
     "release": "release-it",
     "just-try-release": "release-it --dry-run",
-    "publish-prod": "cross-env NODE_ENV=production node bin/publish.js"
+    "publish-prod": "cross-env NODE_ENV=production node bin/publish.js",
+    "upload-prod": "cross-env NODE_ENV=production node bin/upload.js"
   },
   "dependencies": {
     "@release-it/conventional-changelog": "^2.0.0",
