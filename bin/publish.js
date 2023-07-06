@@ -15,7 +15,7 @@ const envFilePath = `.env.${process.env.NODE_ENV || 'development'}`;
 require('dotenv').config({ path: envFilePath });
 
 console.log(process.env.DB);
-
+const giteePwd = fs.readFileSync(path.join(__dirname, '..', 'gitee-pwd.txt')).toString();
 // 项目构建
 
 // execSync('npm run build', { stdio: 'inherit' })
@@ -63,7 +63,7 @@ ssh
     //     config.remoteFile
     //   );
     // !Command
-    await exec('git remote add origin https://13535123588:lwj3721@gitee.com/jking123/biz-editor-server.git', { cwd: remoteDir });
+    await exec(`git remote add origin https://13535123588:${giteePwd}@gitee.com/jking123/biz-editor-server.git`, { cwd: remoteDir });
     await exec('git pull', { cwd: remoteDir });
     await exec('git fetch --tags', { cwd: remoteDir });
     await exec(`git checkout v${pkg.version}`, { cwd: remoteDir });
