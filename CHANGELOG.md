@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/lwjmzla/biz-editor-server/compare/v1.3.0...v1.4.0) (2023-07-06)
+
+
+### Features
+
+* 新增上传文件脚本 ([4935c41](https://github.com/lwjmzla/biz-editor-server/commit/4935c418bca797ff18867e91cf3352cb5a32b421))
+
 # [1.3.0](https://github.com/lwjmzla/biz-editor-server/compare/v1.2.2...v1.3.0) (2023-07-06)
 
 
