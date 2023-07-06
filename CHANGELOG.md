@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/lwjmzla/biz-editor-server/compare/v1.2.2...v1.3.0) (2023-07-06)
+
+
+### Features
+
+* 完成~ ([42a13fd](https://github.com/lwjmzla/biz-editor-server/commit/42a13fd5a91a18671016a65b970dd87422e33fa1))
+
 ## [1.2.2](https://github.com/lwjmzla/biz-editor-server/compare/v1.2.1...v1.2.2) (2023-07-06)
 
 
