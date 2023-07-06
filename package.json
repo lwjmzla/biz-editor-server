@@ -40,7 +40,6 @@
     "require-all": "^3.0.0",
     "sequelize": "^6.17.0",
     "simple-git": "^3.2.6",
-    "ssh2": "^1.14.0",
     "supertest": "^6.2.2",
     "util": "^0.12.4"
   },

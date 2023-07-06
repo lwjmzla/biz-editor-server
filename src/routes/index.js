@@ -25,7 +25,7 @@ router.get('/api/db-check', async (ctx, next) => {
   ctx.body = {
     error: 0,
     data: {
-      name: 'lwj',
+      name: 'lwj1',
       ENV,
       version: packageInfo.version,
       mysqlConn: !!mysqlRes.length,
