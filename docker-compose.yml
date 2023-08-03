@@ -3,13 +3,19 @@ services:
     editor-server: # service name
         volumes: # 相当于docker run -p 82:80 -d -v xxxx:xxxx
             - '.docker-volumes/pm2/logs:/app/logs' # pm2日志同步，这个地方要注意，要放在第一个属性这，否则centos上无效，但本地有效，好奇怪。
-        build:
-            context: . # 当前目录
-            dockerfile: Dockerfile # 基于 Dockerfile 构建
+        # build:
+        #     context: . # 当前目录
+        #     dockerfile: Dockerfile # 基于 Dockerfile 构建
+        build: . # 这里相当于上面的简写。
         image: editor-server # 依赖于当前 Dockerfile 创建出来的镜像
         container_name: editor-server
         ports:
             - 81:3000 # 宿主机通过 81 访问
+        # 当前服务启动之前先要把depends_on指定的服务启动起来才行
+        depends_on:
+        - editor-redis
+        - editor-mysql
+        - editor-mongo
     editor-redis: # service name，重要！
         image: redis # 引用官网 redis 镜像
         container_name: editor-redis
@@ -46,3 +52,9 @@ services:
             - TZ=Asia/Shanghai # 设置时区
         ports:
             - '27016:27017' # 宿主机可以用 127.0.0.1:27016 即可连接容器中的数据库
+        # networks:
+        #     - nest_admin_net  # 感觉networks暂时作用不大
+
+# networks:
+#   nest_admin_net:
+#     name: nest_admin_net
