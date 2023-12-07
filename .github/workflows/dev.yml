@@ -39,7 +39,7 @@ jobs:
                     # 记得删除 origin ，否则会暴露 github 密码
 
                     cd /home/work/biz-editor-server;
-                    git remote add origin https://13535123588:${{secrets.GITEE_LWJ_PASSWORD}}@gitee.com/jking123/biz-editor-server.git;
+                    git remote add origin https://13535123588:${{secrets.GITEE_LWJ_PASSWORD}}@gitee.com:jking123/biz-editor-server.git;
                     # git checkout dev;
                     git pull; # 重新下载最新代码
                     git checkout remotes/origin/dev;
