@@ -1,3 +1,11 @@
+# [1.5.0](https://github.com/lwjmzla/biz-editor-server/compare/v1.4.0...v1.5.0) (2023-12-07)
+
+
+### Features
+
+* 新centos系统配置 ([1ecafea](https://github.com/lwjmzla/biz-editor-server/commit/1ecafead2eb3e9e56afeb3928e4f7217a0481e5f))
+* 优化方式 ([0b082ef](https://github.com/lwjmzla/biz-editor-server/commit/0b082ef2f32e8f7cb3de93520a8109a3f94a1db9))
+
 # [1.4.0](https://github.com/lwjmzla/biz-editor-server/compare/v1.3.0...v1.4.0) (2023-07-06)
 
 
