@@ -1,3 +1,11 @@
+## [1.5.1](https://github.com/lwjmzla/biz-editor-server/compare/v1.5.0...v1.5.1) (2023-12-07)
+
+
+### Bug Fixes
+
+* origin ([9ebb214](https://github.com/lwjmzla/biz-editor-server/commit/9ebb214245fab675ebbbf4c468d7284130467846))
+* origin ([72344b6](https://github.com/lwjmzla/biz-editor-server/commit/72344b6f9209299da51e6d7cb27c8e1d9a0947bb))
+
 # [1.5.0](https://github.com/lwjmzla/biz-editor-server/compare/v1.4.0...v1.5.0) (2023-12-07)
 
 
