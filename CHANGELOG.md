@@ -1,3 +1,10 @@
+## [1.5.4](https://github.com/lwjmzla/biz-editor-server/compare/v1.5.3...v1.5.4) (2023-12-11)
+
+
+### Bug Fixes
+
+* 修改配置 ([864ae4b](https://github.com/lwjmzla/biz-editor-server/commit/864ae4b004687c799bdccef03c5f594dab3becf8))
+
 ## [1.5.3](https://github.com/lwjmzla/biz-editor-server/compare/v1.5.1...v1.5.3) (2023-12-11)
 
 
