@@ -1,3 +1,10 @@
+# [1.6.0](https://github.com/lwjmzla/biz-editor-server/compare/v1.5.4...v1.6.0) (2023-12-12)
+
+
+### Features
+
+* 更换镜像 ([ba12adc](https://github.com/lwjmzla/biz-editor-server/commit/ba12adc76cec478e26c175b5ed21276198a7bbaf))
+
 ## [1.5.4](https://github.com/lwjmzla/biz-editor-server/compare/v1.5.3...v1.5.4) (2023-12-11)
 
 
